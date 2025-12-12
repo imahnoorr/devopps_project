@@ -55,3 +55,7 @@ resource "aws_s3_bucket_policy" "public_policy" {
     ]
   })
 }
+output "s3_website_url" {
+  description = "The URL of the S3 website"
+  value       = aws_s3_bucket_website_configuration.website_config.website_endpoint
+}
